@@ -40,3 +40,86 @@ transition:background-color 0.3s;
 #number{
     text-align:center;
 }
+/* 1. The Main Form Container */
+form {
+  background-color: #ffffff; /* Gives the form a clean white background */
+  max-width: 360px;          /* Restricts the width so it looks like a compact card */
+  margin: 50px auto;         /* Centers the form horizontally on the screen and adds space on top */
+  padding: 30px;             /* Creates inner space between the form edges and the content */
+  border-radius: 12px;       /* Rounds the corners of the form card */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* Adds a soft, modern shadow underneath */
+  font-family: sans-serif;   /* Changes the default font to a clean, modern style */
+}
+
+/* 2. The Main Title */
+h1 {
+  margin-top: 0;             /* Removes default top spacing to align with the padding */
+  margin-bottom: 20px;       /* Adds space directly beneath the title */
+  font-size: 24px;           /* Sets a clean, readable size for the header */
+  color: #222222;            /* Changes the text color from harsh black to a dark charcoal */
+  text-align: center;        /* Centers the title text */
+}
+
+/* 3. The Number Input Box */
+input[type="number"] {
+  width: 100%;               /* Makes the input span the full width of the form container */
+  padding: 12px;             /* Adds internal spacing inside the box so text isn't cramped */
+  margin-bottom: 20px;       /* Creates a gap between the input box and the first radio button */
+  border: 2px solid #e0e0e0; /* Replaces the default border with a thin, light gray line */
+  border-radius: 6px;        /* Slightly rounds the corners of the input box */
+  font-size: 16px;           /* Makes the typed numbers large and legible */
+  box-sizing: border-box;    /* Ensures padding doesn't force the box wider than 100% */
+  outline: none;             /* Removes the default thick outline when clicked */
+  transition: border-color 0.2s; /* Creates a smooth transition effect when focused */
+}
+
+/* Number Input Box (When clicked/focused) */
+input[type="number"]:focus {
+  border-color: #007bff;     /* Changes the border to a bright blue when the user clicks inside */
+}
+
+/* 4. The Radio Buttons */
+input[type="radio"] {
+  accent-color: #007bff;     /* Colors the inside of the radio circle blue to match the theme */
+  margin-bottom: 15px;       /* Creates vertical space between the two radio choices */
+  cursor: pointer;           /* Changes the mouse cursor to a pointer hand on hover */
+  transform: scale(1.15);    /* Slightly increases the size of the radio button for better visibility */
+  vertical-align: middle;    /* Aligns the radio button perfectly in the center line of the text */
+}
+
+/* 5. The Labels (Targeting labels that come immediately after a radio button) */
+input[type="radio"] + label {
+  display: inline-block;     /* Allows the label to accept margin adjustments properly */
+  margin-left: 8px;          /* Pushes the text away from the radio button so they don't touch */
+  margin-bottom: 15px;       /* Matches the radio button margin to keep the layout aligned */
+  font-size: 15px;           /* Sets a clean size for the label text */
+  color: #444444;            /* Dark gray color for comfortable reading */
+  cursor: pointer;           /* Makes the text look clickable, since clicking it toggles the radio */
+  user-select: none;         /* Prevents the text from highlighting if clicked rapidly */
+  vertical-align: middle;    /* Aligns the text perfectly with the transformed radio button */
+}
+
+/* 6. The Submit Button */
+button {
+  width: 100%;               /* Stretches the button to fill the entire bottom of the form */
+  background-color: #007bff; /* Gives the button a vibrant blue background color */
+  color: #ffffff;            /* Makes the "Submit" text white so it stands out */
+  border: none;              /* Removes the default gray browser border */
+  padding: 14px;             /* Adds padding inside the button to make it large and easy to tap */
+  font-size: 16px;           /* Enlarges the text inside the button */
+  font-weight: bold;         /* Makes the button text pop out */
+  border-radius: 6px;        /* Rounds the corners of the button to match the input field */
+  cursor: pointer;           /* Changes the mouse cursor to a pointer hand */
+  margin-top: 10px;          /* Adds separation between the last radio label and the button */
+  transition: background-color 0.2s, transform 0.1s; /* Sets up smooth hover and click animations */
+}
+
+/* Submit Button (Hover State) */
+button:hover {
+  background-color: #0056b3; /* Darkens the blue color when the user hovers over the button */
+}
+
+/* Submit Button (Click State) */
+button:active {
+  transform: scale(0.98);    /* Slightly shrinks the button when clicked to simulate a real press */
+}

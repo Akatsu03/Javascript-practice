@@ -331,3 +331,26 @@ function isEmailValid(email){
  
 
 console.log(isEmailValid("mjoshsorianogmail.com"));*/ 
+const textbox = document.getElementById("textbox");
+const toLbs = document.getElementById("ToLbs");
+const toKg = document.getElementById("ToKg");
+const result = document.getElementById("result");
+let weight;
+
+function convert(){
+    if(toLbs.checked){
+        weight = Number(textbox.value);
+        weight = weight * 2.20462;
+        result.textContent=`The Conversion from KG to LBS is ${Math.round(weight)}`
+    }
+    
+    else if(toKg.checked){
+      weight = Number(textbox.value);
+        weight = weight / 2.20462;
+        result.textContent=`The Conversion from LBS  to KG is ${Math.round(weight)}`
+    }
+    
+    else{
+        result.textContent ="Please Select a unit";
+    }
+}
