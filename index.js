@@ -331,6 +331,10 @@ function isEmailValid(email){
  
 
 console.log(isEmailValid("mjoshsorianogmail.com"));*/ 
+
+
+//conversion project 
+/*
 const textbox = document.getElementById("textbox");
 const toLbs = document.getElementById("ToLbs");
 const toKg = document.getElementById("ToKg");
@@ -353,4 +357,52 @@ function convert(){
     else{
         result.textContent ="Please Select a unit";
     }
+}*/
+//arrays
+/*
+
+let classmates =["Lowell","Ian", "Kurt"];
+
+classmates.sort().reverse();
+
+for(let classmate of classmates){
+    console.log(classmate);
+}*/
+
+/* Spread
+let fruits = ["Apple", "Banana"];
+let vegetables = ["Carrot", "Potato"];
+
+let food = [...fruits, ...vegetables];
+
+console.log(food);
+
+
+*/
+/* rest
+function combineWords(...words) {
+    // 'words' is an array of strings
+    // We join them into one sentence
+
+    let sentence = words.join(" ");
+
+    return sentence;
+}
+
+console.log(combineWords("I", "love", "JavaScript"));*/
+
+function rolldice(){
+    const numofdice = document.getElementById("numofdice").value;
+    const diceresult = document.getElementById("diceResult");
+    const diceimages = document.getElementById("diceImages");
+    const values =[];
+    const images = [];
+
+    for(let i = 0; i< numofdice; i++){
+        const value = Math.floor(Math.random()* 6 )+ 1;
+        values.push(value);
+        images.push(`<img src="dice/${value}.jpg">`);
+    }
+   diceresult.textContent =`dice : ${values.join(', ')}`;
+   diceimages.innerHTML = images.join('');
 }
