@@ -390,7 +390,8 @@ function combineWords(...words) {
 }
 
 console.log(combineWords("I", "love", "JavaScript"));*/
-
+//dice roll
+/*
 function rolldice(){
     const numofdice = document.getElementById("numofdice").value;
     const diceresult = document.getElementById("diceResult");
@@ -405,4 +406,161 @@ function rolldice(){
     }
    diceresult.textContent =`dice : ${values.join(', ')}`;
    diceimages.innerHTML = images.join('');
+}*/
+
+
+// password generator
+/*
+function passwordGenerator (length, inclowercase, incuppercase, incnumbers, incsymbols,){
+    const  lowercasechars ="abcdefghijklmnopqrstuvwxyz";
+    const uppercasechars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const numberschars = "0123456789";
+    const symbolchars = "!@#$%^&*()-_=+[]{}\\|;:'\",<.>/?`~";
+    
+
+    let allowedchars ="";
+    let password = "";
+
+    allowedchars += inclowercase ? lowercasechars : "";
+    allowedchars += incuppercase ? uppercasechars : "";
+    allowedchars += incnumbers ? numberschars : "";
+    allowedchars += incsymbols ? symbolchars : "";
+
+    if(length <= 0){
+        return`(password length must be atleast 1)`;
+    }
+    if(allowedchars.length ===0){
+        return`(you didnt enter anything)`;
+    }
+    for(i = 0; i < length; i++){
+        const randomindex = Math.floor(Math.random() * allowedchars.length);
+        password += allowedchars[randomindex];
+    }
+    return password;
+};
+
+const passwordlength = 8;
+const inclowercase = true;
+const incuppercase = true;
+const incnumbers = true;
+const incsymbols = true;
+
+const password = passwordGenerator(passwordlength, 
+                    inclowercase, 
+                    incuppercase, 
+                    incnumbers, 
+                    incsymbols);
+
+console.log(`Generated Password:${password}`);*/
+//foreach
+/*
+let foods = ["siomai","shanghai","javarice","soy sauce"];
+foods.forEach(capitalize);
+foods.forEach(display);
+
+
+function uppercase (element, index, array){
+    array[index] = element.toUpperCase();
+}
+function display(element){
+    console.log(element);
+}
+function capitalize(element, index, array){
+    array[index] = element.charAt(0).toUpperCase() + element.slice(1);
+}*/
+//map numbers
+/*
+const numbers = [1,2,3,4,5];
+const squares = numbers.map(square);
+const cubes = numbers.map(cube);
+
+console.log(cubes);
+function square(element){
+    return Math.pow(element, 2)
+}
+function cube(element){
+    return Math.pow(element, 3)
+}*/
+//string map
+/*
+
+const roster =["chanty", "kylie","asa", "winter"]
+const babesupper = roster.map(uppercase);
+const babeslower = roster.map(lowercase);
+const babesproper = roster.map(capitalize);
+
+
+console.log(babesproper);
+
+function uppercase(element){
+    return element.toUpperCase();
+}
+function lowercase(element){
+    return element.toLowerCase();
+}
+function capitalize(element){
+    return element.charAt(0).toUpperCase() + element.slice(1);
+}*/
+
+
+
+//map dates
+/*
+const dates = ["2004-3-20", "1954-3-7", "1964-9-28"];
+const formatteddates = dates.map(formatdates);
+console.log(formatteddates);
+
+function formatdates(element){
+    const parts = element.split("-");
+    return `${parts[1]}/${parts[2]}/ ${parts[0]}`;
+}*/
+/*
+let numbers = [1,2,3,4,5,6,7];
+let evennums = numbers.filter(iseven);
+let oddnums = numbers.filter(isodd);
+console.log(oddnums);
+
+function iseven(element){
+    return element % 2 ===0;
+}
+function isodd(element){
+    return element % 2 !==0;
+}*/
+//filter age
+/*
+const ages = [16, 17, 18, 19,20,60]
+const adult = ages.filter(isadult);
+
+console.log(adult);
+
+function isadult(element){
+    return element >= 18;
+}*/
+// filter strings
+/*
+const things = ["pc","mouse","keyboard","usb","phone"];
+const shortwords = things.filter(getSwords);
+const longwords = things.filter(getLwords);
+
+console.log(longwords);
+
+function getSwords(element){
+    return element.length<=4; 
+}
+
+function getLwords(element){
+    return element.length>=4; 
+}*/
+
+const grades = [95,78,98,76,89 ];
+const maximum = grades.reduce(getmax);
+const mainimum = grades.reduce(getmin);
+
+console.log(maximum)
+
+function getmax (accumulator, element){
+    return Math.max(accumulator, element);
+}
+function getmin (accumulator, element){
+    return Math.max(accumulator, element);
 }
