@@ -551,7 +551,7 @@ function getSwords(element){
 function getLwords(element){
     return element.length>=4; 
 }*/
-
+/*
 const grades = [95,78,98,76,89 ];
 const maximum = grades.reduce(getmax);
 const mainimum = grades.reduce(getmin);
@@ -563,4 +563,190 @@ function getmax (accumulator, element){
 }
 function getmin (accumulator, element){
     return Math.max(accumulator, element);
+}*/
+/*
+setTimeout(function(){
+    console.log("fuckyou viewers");
+},5000);*/
+
+
+//arrow function
+/*
+const whatsup = (Name, school)=>{console.log(`Hello dumbass ${Name}`)
+                                 console.log(`You graduated ${school}`);
+};
+whatsup("Marc-Josh", "Cagayan State University");*/
+
+
+//setTimeout(() => console.log("Hello"), 3000);
+// arrow functions
+
+/*
+
+const numbers =[1,2,3,4,5,6];
+
+const squares = numbers.map((Element)=> Math.pow(Element , 2));
+const oddnumbers = numbers.filter((Element) =>(Element %2 !== 0) );
+const total = numbers.reduce((Element, Accumulator)=> Element + Accumulator, 0);
+console.log(total);*/
+
+
+// objects
+
+/*
+const classmate1 ={
+    firsname: "Marc Josh",
+    lastname : "Soriano",
+    age : 22,
+    isemployed: true,
+    greetings : function(){console.log("Wassup yah!!!!")},
 }
+const classmate2 ={
+    firsname: "Lowell",
+    lastname : "Sapad",
+    age : 22,
+    isemployed: false,
+    greetings : function(){console.log("Kamusta boi!!!!")},
+}
+
+console.log(classmate1.firsname);
+console.log(classmate1.lastname);
+console.log(classmate1.age);
+console.log(classmate1.isemployed);
+classmate1.greetings()
+
+console.log(classmate2.firsname);
+console.log(classmate2.lastname);
+console.log(classmate2.age);
+console.log(classmate2.isemployed);
+classmate2.greetings()*/
+// this keyword
+/*
+const classmate1 ={
+    firsname: "Marc Josh",
+    lastname : "Soriano",
+    age : 22,
+    isemployed: true,
+    greetings : function(){console.log(`Wassup yah ${this.firsname}!!!!`)},
+}
+
+classmate1.greetings();
+*/
+
+//Constructor
+/*
+function Baddie(name, arhcetype, personality, lovelanguage ){
+    this.name = name,
+    this.arhcetype = arhcetype,
+    this.personality = personality,
+    this.lovelanguage =lovelanguage,
+    this.message = function(){console.log(`${name} is a ${arhcetype}, her persolitiy traits are ${personality} and her love languages are ${lovelanguage.join(", ")}`)}
+}
+
+const baddie1 = new Baddie ("Haidee", "Chinita", "Calm Cool and Collected", ["Acts of service", "Quality Time", "Words of Affirmaton"]);
+const baddie2 = new Baddie ("Jemimah", "Mestiza", "Outgoing and Kind", ["Quality Time", "Receiving Gifts"]);
+const baddie3 = new Baddie ("Joycs", "Tisay", "Bashful Approachable, shy", ["Physical Touch", "Receiving Gifts", "Words of Affirmation"]);
+
+
+baddie1.message();
+baddie2.message();
+baddie3.message();*/
+
+// Class
+/*
+class Product{
+    constructor(name, price){
+        this.name = name;
+        this.price = price;
+    }
+    display(){
+        console.log(`Product: ${this.name}`);
+        console.log(`Price: $${this.price}`);
+    }
+    calculatotal(salestax){
+        return this.price + ( this.price * salestax)
+    }
+}
+const salestax = 0.05;
+const product1 = new Product ("Ipad", 599.99)
+const product2 = new Product ("Iphone", 899.99)
+const product3 = new Product ("Apple Watch", 299.99)
+product1.display();
+
+const total =  product1.calculatotal(salestax);
+console.log(`Total price with tax $${total.toFixed(2)}`)
+*/
+//Static
+/*
+class MathUtil {
+    static PI = 3.14159
+    
+    static  getDiameter(radius){
+        return radius * 2;
+    }
+    static getCircumference(radius){
+        return 2 * this.PI * radius;
+    }
+    static getArea(radius){
+        return this.PI * radius * radius;
+    }
+}
+
+console.log(MathUtil.getDiameter(10));
+console.log(MathUtil.getCircumference(10).toFixed(2));
+console.log(MathUtil.getArea(10));*/
+/*
+class User{
+    static userCount = 0;
+
+    constructor(username){
+        this.username = username;
+        User.userCount++;
+    }
+}
+
+const user1 = new User("Articuno");
+
+console.log(user1.username);
+console.log(User.userCount);*/
+/*
+class animals{
+    alive = true;
+
+    eat(){
+        console.log(`this ${this.name} is eating`);
+    }
+
+     sleep(){
+        console.log(`this ${this.name} is sleeping`);
+    }
+}
+
+class Hawk extends animals{
+    name = "Hawk";
+    fly(){
+        console.log(`This ${this.name} is flying`)
+    }
+}
+class Tiger extends animals{
+    name = "tiger";
+     run(){
+        console.log(`This ${this.name} is running`)
+    }
+}
+class Grasshopper extends animals{
+    name = "grasshopper";
+     hop(){
+        console.log(`This ${this.name} is hopping`)
+    }
+}
+
+const hawk = new Hawk();
+const tiger = new Tiger();
+const grasshopper = new Grasshopper();
+
+console.log(hawk.alive);
+hawk.sleep();
+hawk.eat();
+hawk.fly();
+*/
